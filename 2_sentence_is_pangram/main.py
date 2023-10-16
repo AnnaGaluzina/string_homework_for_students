@@ -7,6 +7,14 @@
 pytest ./2_sentence_is_pangram/test.py
 """
 
-
 def is_sentence_is_pangram(sentence: str) -> bool:
-    """Пишите ваш код здесь."""
+    sentence = sentence.lower()
+    alphabet = set('abcdefghijklmnopqrstuvwxyz')
+    for char in sentence:
+        if char.isalpha():
+            alphabet.discard(char)
+
+        if len(alphabet) == 0:
+            return True
+
+    return False

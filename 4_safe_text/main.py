@@ -45,7 +45,23 @@ def get_wrong_article() -> str:
 
 
 def recover_article() -> str:
-    wrong_article = get_wrong_article()
 
-    # Ваш код ниже, возвращайте уже отредактированный текст!
+    wrong_article = get_wrong_article().lower()
+
+    sentences = wrong_article.split(SPLIT_SYMBOL)
+
+    new_sentences = []
+
+    for sentence in sentences:
+
+        sentence = sentence[::-1]
+        sentence = sentence.replace('!', '')
+        sentence = sentence.replace('woof-woof', 'cat')
+        sentence = sentence.capitalize()
+
+        new_sentences.append(sentence)
+
+    wrong_article = SPLIT_SYMBOL.join(new_sentences)
+
     return wrong_article
+print(recover_article())
