@@ -20,5 +20,7 @@ def get_max_number_of_words_from_sentences(sentences: list[str]) -> bool:
             max_number = word_count
 
     return max_number
-sentences=["alice and bob love cats", "i think so too", "this is great thanks very much"]
+
+
+sentences = ["alice and bob love cats", "i think so too", "this is great thanks very much"]
 print(get_max_number_of_words_from_sentences(sentences))

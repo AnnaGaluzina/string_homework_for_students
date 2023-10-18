@@ -62,6 +62,7 @@ def recover_article() -> str:
         new_sentences.append(sentence)
 
     wrong_article = SPLIT_SYMBOL.join(new_sentences)
-
     return wrong_article
+
+
 print(recover_article())
